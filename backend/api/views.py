@@ -32,6 +32,6 @@ def api_home(request, *args, **kwargs):
         # into python dict and returning json to client
 
         # data = model_to_dict(instance, fields= ['id','title','price','sale_price'])
-        data = ProductSerializer(instance).data
+        data = ProductSerializer(instance).data  #using drf serializer to pass data
 
     return Response(data)
